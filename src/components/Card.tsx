@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-
+import "../styles/Card.css";
 interface Props{
   pokeId: number;
 }
@@ -23,9 +23,9 @@ const Card = ({pokeId}: Props) => {
   }, [pokeId]);
 
   return (
-    <div>
+    <div className="card">
       <img src={spriteUrl}></img>
-      <div className="pokemon-name">{pokemonName}</div>
+      <button className="pokemon-name">{pokemonName}</button>
     </div>
   )
 }
