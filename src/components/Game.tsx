@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Card from './Card'
 import "../styles/Game.css";
 import Scramble from './Scramble';
