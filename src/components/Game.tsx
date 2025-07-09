@@ -21,17 +21,21 @@ const Game = () => {
   };
 
   //randomizes array order, command
-  const scramble = (arr: any) => {
+  const scramble = () => {
+    const arr = [...pokemon];
     const n = arr.length;
 
     //scramble
     for(let i = 0; i < n-1; i++)
     {
-      const ri = Math.random() * (n - i) + i;
+      const ri = Math.floor(Math.random() * (n - i)) + i;
       const temp = arr[i];
       arr[i] = arr[ri];
       arr[ri] = temp; 
     }
+    setPokemon(arr);
+    console.log("Scrambled");
+    console.log(arr);
 
   };
 
@@ -39,17 +43,20 @@ const Game = () => {
     if(!pokemon[i][1])
     {
       setScore(score + 1);
-      if(score % 12)
+      if((score + 1)% 12 === 0)
       {
         newPokemonSet();
+        return;
       }
       const newPokemon = [...pokemon];
       newPokemon[i][1] = 1;
       setPokemon(newPokemon);
     }
-    console.log(pokemon);
-    scramble(pokemon);
-    console.log(pokemon);
+    else
+    {
+      setScore(0);
+    }
+    scramble();
   };
 
   //let randomPoke = scramble();

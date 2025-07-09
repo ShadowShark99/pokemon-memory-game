@@ -15,10 +15,8 @@ const Card = ({pokeId, foundPokemon, idx}: Props) => {
     const fetchPokemon = async () => {
       const response = await fetch(get);
       const result = await response.json();
-      console.log(result);
       setPokemonName(result.name);
       setSpriteUrl(result.sprites.front_default);
-      console.log(spriteUrl);
     };
 
     fetchPokemon();
