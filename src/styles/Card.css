@@ -1,3 +1,12 @@
 .card {
-  grid-template-rows: auto 40px;
+  grid-template-rows: 1fr 40px;
+  justify-items: center;
+}
+
+.pokemon-name {
+  background-color: rgb(103, 103, 103);
+}
+
+.pokemon-name:hover {
+  background-color: aliceblue;
 }
