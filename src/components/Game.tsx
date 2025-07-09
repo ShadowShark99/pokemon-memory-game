@@ -14,7 +14,7 @@ const Game = () => {
     const newPokemon = [];
     for(let i = 0; i < 12; i++)
     {
-      newPokemon.push([Math.floor((Math.random() * 100) + 1),0]);
+      newPokemon.push([Math.floor((Math.random() * 1025) + 1),0]);
     }
     console.log(newPokemon);
     setPokemon(newPokemon);
