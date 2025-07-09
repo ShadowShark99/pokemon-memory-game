@@ -18,6 +18,7 @@ const Game = () => {
     }
     console.log(newPokemon);
     setPokemon(newPokemon);
+    setScore(0);
   };
 
   //randomizes array order, command
@@ -49,7 +50,7 @@ const Game = () => {
         return;
       }
       const newPokemon = [...pokemon];
-      newPokemon[i][1] = 1;
+      newPokemon[i][1] = 1; //found the pokemon at index i
       setPokemon(newPokemon);
     }
     else

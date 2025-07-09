@@ -6,7 +6,7 @@ interface Props {
 
 const Scramble = ({handleClick}: Props) => {
   return (
-    <button onClick={handleClick}>Scramble</button>
+    <button onClick={handleClick}>New Set</button>
   )
 }
 
