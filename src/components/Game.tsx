@@ -40,6 +40,15 @@ const Game = () => {
 
   };
 
+  const resetPokemon = () => {
+    const newPokemon = [...pokemon];
+    for(let i = 0;i < pokemon.length; i++)
+    {
+      newPokemon[i][1] = 0;
+    }
+    setPokemon(newPokemon);
+  };
+
   const foundPokemon = (i : number) => {
     if(!pokemon[i][1])
     {
@@ -56,6 +65,7 @@ const Game = () => {
     else
     {
       setScore(0);
+      resetPokemon();
     }
     scramble();
   };
