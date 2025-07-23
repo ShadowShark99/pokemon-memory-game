@@ -1,6 +1,7 @@
 import './App.css'
 import Game from './components/Game'
 import Header from './components/Header'
+import Instructions from './components/Instructions'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <>
       <Header></Header>
       <Game></Game>
+      <Instructions></Instructions>
     </>
   )
 }
