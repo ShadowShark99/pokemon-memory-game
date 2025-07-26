@@ -18,7 +18,6 @@ const Game = () => {
     }
     console.log(newPokemon);
     setPokemon(newPokemon);
-    setScore(0);
   };
 
   //randomizes array order, command
@@ -78,7 +77,7 @@ const Game = () => {
         {pokemon.map((id, idx) => (<Card pokeId={id[0]} foundPokemon={foundPokemon} idx={idx}></Card>))}
         
       </div>
-      <Scramble handleClick={newPokemonSet}></Scramble>
+      <Scramble handleClick={() => {newPokemonSet(); setScore(0);}}></Scramble>
       <ScoreBoard score={score}></ScoreBoard>
     </>
   )
