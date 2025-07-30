@@ -4,10 +4,13 @@ import "../styles/Game.css";
 import Scramble from './Scramble';
 import ScoreBoard from './ScoreBoard';
 
+
 const Game = () => {
   const [score, setScore] = useState(0);
   //[id, picked(boolean]
   const [pokemon, setPokemon] = useState([[1,0],[2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0],[9,0],[10,0],[11,0],[12,0]]); //pokemon index currently selected
+  //monster
+  //const [used,setUsed] = useState([]);
 
   
   const newPokemonSet = () => {
